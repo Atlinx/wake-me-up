@@ -1,0 +1,6 @@
+.venv
+*.cert
+*.key
+*.cnf
+*config.json
+*.env

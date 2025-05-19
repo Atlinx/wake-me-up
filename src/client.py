@@ -74,10 +74,12 @@ def main():
     subparsers = parser.add_subparsers(required=True, dest="cmd")
 
     # Parse list command
-    parser_list = subparsers.add_parser("list")
+    parser_list = subparsers.add_parser(
+        "list", help="Lists available computers to wake up."
+    )
 
     # Parse list command
-    parser_wake = subparsers.add_parser("wake")
+    parser_wake = subparsers.add_parser("wake", help="Wakes up a computer.")
     parser_wake.add_argument("name", type=str, help="Name of computer to wake up.")
 
     args = parser.parse_args()

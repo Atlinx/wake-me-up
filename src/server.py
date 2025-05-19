@@ -42,7 +42,7 @@ def handle_conn(
                     name = data
                     if name in config["computers"]:
                         computer_data = config["computers"][name]
-                        print(f"send magic packet to {computer_data['mac']}")
+                        print(f"    Sending magic packet to {computer_data}")
                         wakeonlan.send_magic_packet(
                             computer_data["mac"], ip_address=computer_data["ip"]
                         )

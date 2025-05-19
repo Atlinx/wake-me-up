@@ -50,7 +50,7 @@ def handle_conn(
                     else:
                         send_msg(msg.MsgID.RESULT, "Invalid name.")
                 case msg.MsgID.LIST:
-                    send_msg(msg.MsgID.RESULT, config["computers"])
+                    send_msg(msg.MsgID.RESULT, config["computers"].keys())
                 case _:
                     send_msg(msg.MsgID.RESULT, "Unknown command.")
         print(f"    Received msg: {id} response: {data}")
